@@ -99,7 +99,7 @@ void ZSTD_INFO::init_stream_decoder(stream_t* stream, char* raw_data)
 void ZSTD_INFO::init_stream_encoder(stream_t* stream, char* raw_data)
 {
   stream->encoder_stream = ::ZSTD_createCStream();
-  auto ret = ::ZSTD_initCStream(stream->encoder_stream, 19);
+  auto ret = ::ZSTD_initCStream(stream->encoder_stream, 22);
   if (::ZSTD_isError(ret)) {
     throw std::runtime_error("Failed to initialize Zstd compression");
   }
